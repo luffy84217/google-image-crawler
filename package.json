@@ -1,0 +1,32 @@
+{
+  "name": "google-image-crawler",
+  "version": "1.0.0",
+  "description": "This is a google image crawler based on Google custom search engine.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "delete": "node ./src/delete.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luffy84217/google-image-crawler.git"
+  },
+  "keywords": [
+    "crawler",
+    "custom search engine",
+    "image search"
+  ],
+  "author": "Fu Chuan Yu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luffy84217/google-image-crawler/issues"
+  },
+  "homepage": "https://github.com/luffy84217/google-image-crawler#readme",
+  "dependencies": {
+    "async": "^2.5.0",
+    "del": "^3.0.0",
+    "dotenv": "^4.0.0",
+    "download": "^6.2.5",
+    "google-images": "^2.1.0"
+  }
+}
