@@ -15,8 +15,11 @@ module.exports = (key, callback) => {
     client.search(key.search, { page: key.range })
         .then(images => callback(null,
             Promise
-                .all(images.map(image => download(image.url, `downloads/${key.search}`)))
-                .then(() => console.log(`${key.search} page ${key.range} images downloaded!`))
+                .all(images.map(image => download(image.url, `downloads/${key.search}`)
+                    .catch((err => {
+                        if (err) throw new Error('\nDownload uncompleted. Invalid type format!');
+                    }))))
+                .then(() => console.info(`${key.search} page ${key.range} images downloaded!`))
         ))
         .catch(err => callback(err));
 };

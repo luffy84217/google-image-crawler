@@ -14,7 +14,7 @@ if (a.length > 2) {
         console.info('Start downloading!');
         map(searchItems, fetch, (err, results) => {
             if (err) {
-                console.error('There\'s something wrong with any of url\'s response.');
+                console.error('There\'s something wrong with any of url\'s response or exceed quota.');
             }
         });
     } else {
